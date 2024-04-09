@@ -39,7 +39,7 @@ export const portfolioType = defineType({
         list: [
           {title: 'Diagramação', value: 'diagramacao'},
           {title: 'Identidade Visual', value: 'identidade'},
-          {title: 'Lançamentos', value: 'lançamento'},
+          {title: 'Lançamentos', value: 'lancamentos'},
         ],
       },
     }),
