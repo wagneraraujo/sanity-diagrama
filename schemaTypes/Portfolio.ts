@@ -16,6 +16,16 @@ export const portfolioType = defineType({
     }),
 
     defineField({
+      name: 'slug',
+      type: 'slug',
+      description: 'Url personalizada ex: diagramacriativo.com/nome-do-projeto',
+      options: {
+        source: 'Titulo',
+        maxLength: 200, // will be ignored if slugify is set
+        slugify: (input) => input.toLowerCase().replace(/\s+/g, '-').slice(0, 200),
+      },
+    }),
+    defineField({
       name: 'embed',
       type: 'string',
       description: 'Se for diagramacao, inserir aqui o código embed',
